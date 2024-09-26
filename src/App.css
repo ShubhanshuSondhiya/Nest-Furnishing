@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #2A2D34;
+    font-size: large;
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+   
+.homepage-img{
+    box-shadow: rgba(126, 126, 126, 0.16) 0px 1px 4px, rgb(122, 122, 122) 0px 0px 0px 3px;
+}
+.background{
+    background-image: url("./assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+.wrapper{
+    position: relative;
+    }
+    
+    .wrapper span{
+    position: absolute;
+    top: -8px;
+    right: -7px; 
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    color: black;
+    background-color: rgb(253, 253, 253);
+    font-size: x-small;
+    }
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.card {
+    font-weight: 600;
+    font-size: large;
+    text-transform: capitalize;
+    transition: transform 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}  
+.fadeIn{
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.fadeInLeft{
+    animation: fadeInLeft ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+   }
+   
+   .drop-in-2 {
+    animation: drop-in 1200ms ease 500ms backwards;
+   }
+   
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+   @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
