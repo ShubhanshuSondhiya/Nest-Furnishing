@@ -6,6 +6,7 @@ import "../App.css";
 import { useContext, useState } from "react";
 import { myContext } from "../App";
 import Hamburger from "./Hamburger";
+import Logo from "../../public/Logo.png"
 function Header() {
   const { user,loggedIn,cart } = useContext(myContext);
   const [hamburger, setHamburger] = useState(false);
@@ -19,7 +20,7 @@ function Header() {
               <div className="flex items-center">
                 <img
                   className="w-8 mr-2 rounded-xl"
-                  src="./public/Logo.png"
+                  src={Logo}
                   alt=""
                 />
                 NEST
